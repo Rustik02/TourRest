@@ -1,0 +1,38 @@
+.order-online1 {
+  width: 300px;
+  height: 80px;
+  border-radius: 30px;
+  border: 0;
+  background-color: cornflowerblue;
+  color: white;
+  font-family: montserrat;
+  cursor: pointer;
+  transition: 0.6s;
+  text-transform: uppercase;
+}
+section {
+  margin-top: 200px;
+  width: 100%;
+}
+.order-online1:hover {
+  transform: translate(0px, -4px);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+.row {
+  width: 60%;
+  margin-left: 10%;
+  padding-bottom: 200px;
+}
+h2 {
+  text-transform: uppercase;
+  font-size: 100px;
+  width: 60%;
+  color: white;
+  margin-top: 400px;
+  text-align: start;
+  margin-bottom: 100px;
+}
+.about-btn {
+  display: flex;
+  justify-content: start;
+}

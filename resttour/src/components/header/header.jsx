@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FirstSection } from "./first-section/first-section";
 import "./header.css";
 import React, { useState, useEffect } from "react";
+import {Hero} from "./hero/hero";
 
 export function Header(params) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,8 @@ export function Header(params) {
     <div>
       <header>
         <div className="header">
-          <div className={`container ${isScrolled ? "scrolled" : ""}`}>
+          <div className={`containerr ${isScrolled ? "scrolled" : ""}`}>
+            <div className={`wrapper ${isScrolled ? "scrolled" : ""}`} >
             <div className="nav-logo">
               <h1 className="logo">TourRest</h1>
             </div>
@@ -57,15 +59,10 @@ export function Header(params) {
                 </li>
               </ul>
             </div>
-          </div>
-          <section>
-            <div className="row">
-                <h2>Explore the Beauty of the Beautiful World</h2>
-                <div className="about-btn">
-                  <button className="order-online1">explore now</button>
-              </div>
+
             </div>
-          </section>
+          </div>
+          <Hero/>
         </div>
       </header>
     </div>
