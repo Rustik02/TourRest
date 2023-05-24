@@ -8,7 +8,7 @@ class ToursAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'duration', 'destination')
 
 
-@admin.register(Destination)
+@admin.register(Destinations)
 class DestinationAdmin(admin.ModelAdmin):
     list_display = ('country', 'number_of_tours', 'number_of_places')
 
