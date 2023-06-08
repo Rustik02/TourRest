@@ -7,7 +7,7 @@ from django.db import models
 class Destinations(models.Model):
     country = models.CharField('Country', max_length=40, default='Uzbekistan')
     city = models.CharField('City', max_length=50, default='Tashkent')
-    image = models.ImageField('Image', upload_to='media/images/destinations', max_length=100, default=None, blank=True, null=True)
+    image = models.ImageField('Image', upload_to='images/destinations', max_length=100, default=None, blank=True, null=True)
 
     def __str__(self):
         return f'{self.country}, {self.city}'
@@ -28,7 +28,7 @@ class Destinations(models.Model):
 class Places(models.Model):
     destination = models.ForeignKey(Destinations, on_delete=models.CASCADE, related_name='places')
     name = models.CharField('Place Name', max_length=50)
-    image = models.ImageField('Image', upload_to='media/images/places', max_length=100, default=None)
+    image = models.ImageField('Image', upload_to='images/places', max_length=100, default=None)
 
     def get_destination(self):
         return f'{self.destination.country}, {self.destination.city}'
@@ -47,7 +47,7 @@ class Tours(models.Model):
     start_date = models.DateField('Start date', blank=True, null=True)
     end_date = models.DateField('End date', blank=True, null=True)
     place = models.ForeignKey('Places', on_delete=models.CASCADE, related_name='tours', blank=True, null=True)
-    image = models.ImageField('Image', upload_to='media/images/tours', max_length=100, default=None, blank=True)
+    image = models.ImageField('Image', upload_to='images/tours', max_length=100, default=None, blank=True)
     price_per_day = models.DecimalField('Price per day', max_digits=10, decimal_places=2, blank=True, null=True)
     hotel_price = models.ForeignKey('Hotels', on_delete=models.CASCADE, blank=True, null=True)
     flight_price = models.ForeignKey('Flights', on_delete=models.CASCADE, blank=True)
@@ -65,11 +65,11 @@ class Tours(models.Model):
         return f'{self.name} - {self.price_per_day}'
 
     def duration(self):
-        return (self.end_date - self.start_date).days + 1
+        return (self.end_date - self.start_date) + 1
 
     def total_price(self):
-        price_per_day = self.price_per_day + self.hotel_price + self.flight_price
-        participant_count = self.members
+        price_per_day = self.price_per_day + self.hotel_price.calculate_total_price + self.flight_price.calculate_price
+        participant_count = self.participants.count
         total_price = price_per_day * self.duration * participant_count
         return total_price
 
@@ -117,7 +117,7 @@ class Flights(models.Model):
     def members(self):
         return self.participants.count()
 
-    def calculate_total_price(self):
+    def calculate_price(self):
         flight_price = self.flight_class.price
         if flight_price is None:
             return None

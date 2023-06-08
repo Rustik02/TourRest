@@ -10,8 +10,12 @@ from .serializer import *
 
 
 # Create your views here.
-class MainView(TemplateView):
-    template_name = "index.html"
+def index(request):
+    context = {
+        'destinations': Destinations.objects.all(),
+        'tours': Tours.objects.all()
+    }
+    return render(request, "index.html", context)
 
 
 class UserViewSet(ModelViewSet):
