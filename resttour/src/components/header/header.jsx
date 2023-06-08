@@ -1,6 +1,5 @@
 import "@coreui/coreui/dist/css/coreui.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FirstSection } from "./first-section/first-section";
 import "./header.css";
 import React, { useState, useEffect } from "react";
 import {Hero} from "./hero/hero";

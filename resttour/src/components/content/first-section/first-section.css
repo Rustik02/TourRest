@@ -1,0 +1,123 @@
+.travel {
+    background-color: #f2f2f2;
+    padding: 10px;
+    position: relative;
+  }
+  
+  .block-container {
+    margin: 0 auto;
+    width: 1200px;
+    position: absolute;
+    top: -150px;
+    left: 4%;
+}
+
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  .single-travel-boxes {
+    background-color: #fff;
+    padding: 20px;
+    width: 1200px;
+    border-radius: 5px;
+  }
+  
+  #desc-tabs {
+    margin-top: 20px;
+  }
+  
+  .nav-tabs {
+    border-bottom: none;
+  }
+  
+  .nav-tabs li {
+    width: 100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-tabs a {
+    color: #555;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px 5px 0 0;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-tabs a:hover {
+    background-color: #eee;
+  }
+  
+  .nav-tabs .active a {
+    background-color: #fff;
+    border-bottom: 2px solid #333;
+  }
+  
+  .tab-content {
+    margin-top: 20px;
+  }
+  
+  .single-tab-select-box {
+    margin-bottom: 20px;
+    width: 330px;
+    height: 87px;
+  }
+  
+  h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .travel-select-icon select,
+  .travel-check-icon input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .travel-select-icon select option {
+    padding: 5px;
+  }
+  
+  .travel-budget {
+    margin-top: 20px;
+  }
+  
+  .travel-budget h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .price_slider_amount input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .about-btn {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .about-view.travel-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .about-view.travel-btn:hover {
+    background-color: #555;
+  }
+  
+  

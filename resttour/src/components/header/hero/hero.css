@@ -11,7 +11,7 @@
   text-transform: uppercase;
 }
 section {
-  margin-top: 200px;
+  padding-top: 200px;
   width: 100%;
 }
 .order-online1:hover {

@@ -1,5 +1,5 @@
 import './App.css';
-import { FirstSection } from './components/header/first-section/first-section';
+import { FirstSection } from './components/content/first-section/first-section.jsx';
 import { Header } from './components/header/header.jsx';
 
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      {/*<FirstSection/>*/}
+      <FirstSection/>
     </div>
   );
 }

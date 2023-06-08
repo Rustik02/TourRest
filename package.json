@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.21.5"
+  }
+}
