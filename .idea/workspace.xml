@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecd0b2cc-7943-477a-8934-96aeef8a2210" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourRest/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TourRest/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Registration/Registration.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Registration/Registration.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/context/AuthContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/context/AuthContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/profile/profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/profile/profile.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requriaments" beforeDir="false" afterPath="$PROJECT_DIR$/requriaments" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +93,7 @@
       <workItem from="1687414849396" duration="3231000" />
       <workItem from="1687422885471" duration="3969000" />
       <workItem from="1687432990686" duration="4385000" />
-      <workItem from="1687437634361" duration="6177000" />
+      <workItem from="1687437634361" duration="6937000" />
     </task>
     <servers />
   </component>
