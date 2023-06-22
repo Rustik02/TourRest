@@ -32,6 +32,7 @@ h1 {
 }
 
 .version {
+  position: absolute;
   bottom: 1em;
   right: 2em;
   border-radius: 40px;
@@ -114,6 +115,7 @@ span.loginwith::after {
 
 span.copy {
   display: block;
+  position: absolute;
   bottom: 0;
   font-size: 1em;
 }
@@ -148,7 +150,7 @@ button:focus {
   outline: none;
 }
 
-#containerr {
+#container {
   width: 95%;
   max-width: 800px;
   height: 500px;
@@ -158,6 +160,7 @@ button:focus {
   transform-style: preserve-3d;
 }
 #container > div {
+  position: absolute;
   width: 50%;
   min-width: 350px;
   height: 100%;
