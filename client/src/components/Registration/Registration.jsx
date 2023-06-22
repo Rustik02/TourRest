@@ -35,7 +35,7 @@ const Registration = () => {
           <div className="content">
             <h1 className="h1">Log In</h1>
             <div className="form">
-              <input type="email" name="email" placeholder="email" onChange={(e)=>{setUsername(String(e.target.value))}} value={username} />
+              <input type="email" name="email" placeholder="username" onChange={(e)=>{setUsername(String(e.target.value))}} value={username} />
               <input type="password" name="password" placeholder="password" onChange={(e)=>{setPassword(String(e.target.value))}} value={password} />
               <div className="spanContent">
                 <span id="span" className="remember">

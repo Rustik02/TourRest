@@ -4,10 +4,9 @@ import { AuthContext } from "../context/AuthContext";
 import "./profile.css";
 
 const Profile = () => {
-  const { loginUser, registerUser } = useContext(AuthContext);
+  const { UpdateUser, registerUser } = useContext(AuthContext);
   const { user, logoutUser } = useContext(AuthContext);
   const [isActive, setIsActive] = useState(false);
-
   function btnHandler() {
     setIsActive(true);
   }
@@ -87,17 +86,18 @@ const Profile = () => {
           </div>
 
           <div className="profile-card-message js-message">
-            <form className="profile-card-form" onSubmit={registerUser}>
+            <form className="profile-card-form" onSubmit={UpdateUser}>
               <div className="profile-card-form__container">
                 <input type="text" name="username" placeholder="name" />
                 <input type="email" name="email" placeholder="email" />
                 <input type="phone" name="phone" placeholder="phone number" />
                 <input type="password" name="password" placeholder="password" />
-                <textarea placeholder="Say something..."></textarea>
+                <textarea name="description" placeholder="Say something..."></textarea>
               </div>
 
               <div className="profile-card-form__bottom">
                 <button
+                type="submit"
                   onClick={() => {
                     closeHandler();
                   }}

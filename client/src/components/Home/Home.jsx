@@ -15,6 +15,7 @@ import 'aos/dist/aos.css'
 const Home = () => {
 
   const [destination, setDestination] = useState('')
+  const [date, setDate] = useState('')
 
 
 
@@ -23,6 +24,13 @@ const Home = () => {
     setDestination(name)
     console.log(destination);
   }
+  const handleDate = (e) => {
+    let name= e.target.value
+    setDate(name)
+    console.log(date);
+  }
+
+  
 
   useEffect(() => {
     Aos.init({duration: 2000})
@@ -48,7 +56,7 @@ const Home = () => {
           <div className="dateInput">
             <label htmlFor="date">Select your date:</label>
             <div className="input flex">
-              <input type="date" placeholder="Enter date here...." />
+              <input type="date" placeholder="Enter date here...." onChange={handleDate}/>
             </div>
           </div>
           <div className="priceInput">

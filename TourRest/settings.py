@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 AUTH_USER_MODEL = 'mainapp.User'
 
 INSTALLED_APPS = [
+    'corsheaders',
     'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,7 +42,6 @@ INSTALLED_APPS = [
     'mainapp',
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
-    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -104,6 +104,8 @@ DATABASES = {
 #     }
 # }
 
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -199,5 +201,3 @@ SIMPLE_JWT = {
 
 }
 
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOW_CREDENTIALS = True
