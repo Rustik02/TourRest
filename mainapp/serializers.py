@@ -37,11 +37,18 @@ class SeasonSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+# class TourImageSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = TourDetailImage
+#         fields = '__all__'
+
+
 class TourDetailSerializer(serializers.ModelSerializer):
     tour = TourSerializer()
     difficulty_level = DifficultyLevelSerializer()
     seasons = SeasonSerializer(many=True)
     end_date = serializers.SerializerMethodField()
+    # image = TourImageSerializer
 
     class Meta:
         model = TourDetail
@@ -61,6 +68,12 @@ class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = ['id', 'user', 'text', 'created_at']
 
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):

@@ -18,6 +18,16 @@ class BookingAdmin(admin.ModelAdmin):
     list_display = ['name']
 
 
+# @admin.register(TourDetailImage)
+# class TourDetailImageAdmin(admin.ModelAdmin):
+#     list_display = ['id']
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ['user', 'tour']
+
+
 @admin.register(TourType)
 class TourTypeAdmin(admin.ModelAdmin):
     list_display = ['name']

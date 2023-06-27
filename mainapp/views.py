@@ -6,24 +6,6 @@ from rest_framework.views import APIView, Response
 from django.db.models import Q
 
 
-class TourDetailView(APIView):
-    def get(self, request):
-        name = request.GET.get('name')
-        date = request.GET.get('date')
-        price = request.GET.get('price')
-
-        if name:
-            queryset = Tour.objects.filter(Q(country__name=name))
-
-        if date:
-            queryset = Tour.objects.filter(Q(date=date))
-
-        if price:
-            queryset = Tour.objects.filter(Q(price=price))
-
-        return Response(TourSerializer(queryset, many=True).data)
-
-
 # Create your views here.
 
 
@@ -40,7 +22,7 @@ class TourTypeViewSet(ModelViewSet):
 
 
 class TourViewSet(ModelViewSet):
-    queryset = Tour.objects.all()
+    queryset = Tour.objects.select_related('country', 'season', 'difficulty_level').all()
     serializer_class = TourSerializer
     # permission_classes = [IsAdminReadOnly]
 
@@ -63,6 +45,29 @@ class BookingViewSet(ModelViewSet):
     # permission_classes = [IsAdminReadOnly]
 
 
+class TourSearch(ModelViewSet):
+    queryset = TourDetail.objects.all()
+    serializer_class = TourDetailSerializer
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        query = self.request.query_params.get('query', '')
+        date = self.request.query_params.get('date', '')
+        price = self.request.query_params.get('price', '')
+        if query:
+            queryset = queryset.filter(tour__country__name__icontains=query)
+        if date:
+            queryset = queryset.filter(start_date__icontains=date)
+        if price:
+            queryset = queryset.filter(tour_price__icontains=price)
+        return queryset
+
+
+# class TourImageViewSet(ModelViewSet):
+#     queryset = TourDetailImage.objects.all()
+#     serializer_class = TourImageSerializer
+
+
 class TourDetailViewSet(ModelViewSet):
     queryset = TourDetail.objects.all()
     serializer_class = TourDetailSerializer
@@ -72,6 +77,12 @@ class TourDetailViewSet(ModelViewSet):
 class CustomerViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = CustomerSerializer
+    # permission_classes = [IsAdminReadOnly]
+
+
+class CommentAPIView(ModelViewSet):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
     # permission_classes = [IsAdminReadOnly]
 
 

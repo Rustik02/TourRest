@@ -1,10 +1,10 @@
 import os
 from datetime import timedelta
 from django.contrib.auth.models import AbstractUser, Group, Permission
-from django.contrib.auth.validators import UnicodeUsernameValidator
+from django.contrib.contenttypes.fields import GenericForeignKey
+from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.utils import timezone
-from django.utils.translation import gettext_lazy as _
 
 
 class Country(models.Model):
@@ -34,13 +34,10 @@ class Tour(models.Model):
         return self.title
 
 
-def tour_detail_image_path(instance, filename):
-    # Получение имени файла
-    filename_base, filename_ext = os.path.splitext(filename)
-    # Получение имени папки тура, используя его ID
-    tour_folder = 'tour_{}'.format(instance.tour_id)
-    # Собираем путь для сохранения изображения
-    return os.path.join('images/tour_detail', tour_folder, filename)
+# def tour_detail_image_path(instance, filename):
+#     tour_folder = 'tour_{}'.format(instance.tour_title)
+#     # Собираем путь для сохранения изображения
+#     return os.path.join('images/tour_detail', tour_folder, filename)
 
 
 class DifficultyLevel(models.Model):
@@ -57,6 +54,11 @@ class Season(models.Model):
         return self.name
 
 
+# class TourDetailImage(models.Model):
+#     title = models.CharField('Name of image', max_length=100)
+#     images = models.ImageField('Image', upload_to=tour_detail_image_path)
+
+
 class TourDetail(models.Model):
     tour = models.OneToOneField(Tour, on_delete=models.CASCADE, related_name='tour')
     duration = models.PositiveIntegerField('Duration (days)')
@@ -68,11 +70,11 @@ class TourDetail(models.Model):
     itinerary = models.TextField('Itinerary')
     highlights = models.TextField('Highlights')
     price_includes = models.TextField('Price includes')
-    image1 = models.ImageField('Image', upload_to=tour_detail_image_path)
-    image2 = models.ImageField('Image', upload_to=tour_detail_image_path)
-    image3 = models.ImageField('Image', upload_to=tour_detail_image_path)
-    image4 = models.ImageField('Image', upload_to=tour_detail_image_path)
-    image5 = models.ImageField('Image', upload_to=tour_detail_image_path)
+    image1 = models.ImageField('Image', upload_to='images/tour/tourdetail/')
+    image2 = models.ImageField('Image', upload_to='images/tour/tourdetail/')
+    image3 = models.ImageField('Image', upload_to='images/tour/tourdetail/')
+    image4 = models.ImageField('Image', upload_to='images/tour/tourdetail/')
+    image5 = models.ImageField('Image', upload_to='images/tour/tourdetail/')
 
     # Добавьте другие параметры для отдыха на природе, если необходимо
 
@@ -105,7 +107,7 @@ class TourDetail(models.Model):
 #             return None
 
 class Booking(models.Model):
-    tour_id = models.PositiveBigIntegerField('Tour ID', blank=True, null=True)
+    tour_url = models.URLField('Tour Url', blank=True, null=True)
     name = models.CharField('Name', max_length=40, null=True, blank=True)
     phone = models.CharField('Phone number', max_length=20, blank=True, null=True)
 
@@ -122,3 +124,16 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.username
+
+
+class Comment(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    tour = models.ForeignKey(Tour, on_delete=models.CASCADE)
+    text = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"Comment by {self.user.username} on {self.tour}"
