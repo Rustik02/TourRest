@@ -6,55 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ecd0b2cc-7943-477a-8934-96aeef8a2210" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourRest/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TourRest/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TourRestBot/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/TourRestBot/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mainapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/country/moon-gc122dbd36_1920.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/country/moon-gc122dbd36_1920_2flvEYJ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/country/moon-gc122dbd36_1920_7Lo1xRg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/country/moon-gc122dbd36_1920_i7XZNA6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/country/moon-gc122dbd36_1920_p1gwZL6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/country/moon-gc122dbd36_1920_qAo2lkH.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour/moon-gc122dbd36_1920.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour/moon-gc122dbd36_1920_ToZ1cwV.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour/moon-gc122dbd36_1920_WYHybKI.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour/moon-gc122dbd36_1920_oEzbGQ8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour/moon-gc122dbd36_1920_yCeaYit.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour/moon-gc122dbd36_1920_z3edY6L.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_0fT9fPM.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_4i6rCfW.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_63SigXZ.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_6LAhSFT.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_8Hf1yLe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_M6GM9sf.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_MCYBnXx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_Wt58LyP.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_XauHvhu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_Ye5S1SB.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_bMSEFYe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_czyEFrx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_dNUv9xB.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_1/moon-gc122dbd36_1920_dklMhOE.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_2/moon-gc122dbd36_1920.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_2/moon-gc122dbd36_1920_3Amwdfd.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_2/moon-gc122dbd36_1920_899b2kX.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_2/moon-gc122dbd36_1920_99zIrDR.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_2/moon-gc122dbd36_1920_FOsIQC8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_2/moon-gc122dbd36_1920_GzZg2lL.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_2/moon-gc122dbd36_1920_W5XLX3q.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_2/moon-gc122dbd36_1920_XgRzJZs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_2/moon-gc122dbd36_1920_no4sRTO.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/tour_detail/tour_2/moon-gc122dbd36_1920_xFgJad6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/users/moon-gc122dbd36_1920.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/users/moon-gc122dbd36_1920_jopDcC8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/users/moon-gc122dbd36_1920_ziza8Hl.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +100,7 @@
       <workItem from="1687532498727" duration="429000" />
       <workItem from="1687783484332" duration="2694000" />
       <workItem from="1687852773230" duration="6199000" />
-      <workItem from="1687872726161" duration="5295000" />
+      <workItem from="1687872726161" duration="6417000" />
     </task>
     <servers />
   </component>

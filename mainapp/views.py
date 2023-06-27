@@ -22,7 +22,7 @@ class TourTypeViewSet(ModelViewSet):
 
 
 class TourViewSet(ModelViewSet):
-    queryset = Tour.objects.select_related('country', 'season', 'difficulty_level').all()
+    queryset = Tour.objects.select_related('country').all()
     serializer_class = TourSerializer
     # permission_classes = [IsAdminReadOnly]
 

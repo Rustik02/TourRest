@@ -107,7 +107,7 @@ class TourDetail(models.Model):
 #             return None
 
 class Booking(models.Model):
-    tour_url = models.URLField('Tour Url', blank=True, null=True)
+    tour_id = models.PositiveIntegerField('Tour ID', blank=True, null=True)
     name = models.CharField('Name', max_length=40, null=True, blank=True)
     phone = models.CharField('Phone number', max_length=20, blank=True, null=True)
 
